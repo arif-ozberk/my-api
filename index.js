@@ -2,9 +2,12 @@ import express from "express";
 import path from "path";
 import moment from "moment";
 import userData from "./Members.js";
+import cors from "cors";
 
 const app = express();
 const PORT = 5000;
+
+app.use(cors());
 
 
 const myMiddleware = (req, res, next) => {
